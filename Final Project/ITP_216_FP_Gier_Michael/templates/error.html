@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Error</title>
+    </head>
+    <body>
+        <h1>Error. Enter integers within the required ranges.</h1>
+        <h2>Prediction</h2>
+        <p>To see an estimated price for a house, enter values for square footage (integer), number of bedrooms (integer),
+            number of bathrooms (integer), and year built (integer between 1900 and 2014).</p>
+        <form action="/action/get_prediction" method="POST">
+            <input title="Square Feet" type="number" name="square feet" placeholder="square feet">
+            <input title="Bedrooms" type="number" name="bedrooms" placeholder="bedrooms">
+            <input title="Bathrooms" type="number" name="bathrooms" placeholder="bathrooms">
+            <input title="Year" type="number" name="year" placeholder="year">
+            <p><input type="submit" value="Calculate"></p>
+        </form>
+    </body>
+</html>

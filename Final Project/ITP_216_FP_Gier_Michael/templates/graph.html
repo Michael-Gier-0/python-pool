@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pricing Data</title>
+    </head>
+    <body>
+        <h2>Price Data</h2>
+        <p>Here is the price of houses built between {{ year1 }} and {{ year2 }}:</p>
+            <img src="data:image/png;base64, {{ fig_url }}", width="700">
+        <h2>Prediction</h2>
+        <p>To see an estimated price for a house, enter values for square footage (integer), number of bedrooms (integer),
+            number of bathrooms (integer), and year built (integer between 1900 and 2014).</p>
+        <form action="/action/get_prediction" method="POST">
+            <input title="Square Feet" type="number" name="square feet" placeholder="square feet">
+            <input title="Bedrooms" type="number" name="bedrooms" placeholder="bedrooms">
+            <input title="Bathrooms" type="number" name="bathrooms" placeholder="bathrooms">
+            <input title="Year" type="number" name="year" placeholder="year">
+            <p><input type="submit" value="Calculate"></p>
+        </form>
+        <h2>New Range of Years</h2>
+        <p>Enter a new range of years (integers between 1900 and 2014) to see pricing data for houses built in those years.</p>
+        <form action="/action/creategraph" method="POST">
+            <input type="number" name="start year" placeholder="1900">
+            <input type="number" name="end year" placeholder="2014">
+            <input type="submit" value="Calculate">
+        </form>
+    </body>
+</html>
